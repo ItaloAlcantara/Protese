@@ -5,7 +5,7 @@ import com.protese.rest.model.common.BaseEntity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "contato",schema = "business")
+@Table(name = "contato")
 public class Contato extends BaseEntity {
 
     @Enumerated(EnumType.STRING)

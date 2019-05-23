@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Entity
-@Table(name="empresa",schema = "busness")
+@Table(name="empresa")
 public class Empresa extends BaseEntity {
 
     @NotNull
@@ -19,7 +19,7 @@ public class Empresa extends BaseEntity {
     @NotNull
     private String nomeFantasia;
     @OneToMany
-    @JoinTable(name = "empresacontato",schema = "busness",
+    @JoinTable(name = "empresacontato",
     joinColumns = @JoinColumn(name = "empresaid",referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn (name = "contatoid",referencedColumnName = "id"))
     private List<Contato> contatos;

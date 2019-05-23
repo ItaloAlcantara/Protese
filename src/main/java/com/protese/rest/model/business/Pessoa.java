@@ -12,7 +12,7 @@ import java.util.Calendar;
 import java.util.List;
 
 @Entity
-@Table(name="pessoa",schema="business")
+@Table(name="pessoa")
 public class Pessoa extends BaseEntity {
 
     @NotNull
@@ -24,7 +24,7 @@ public class Pessoa extends BaseEntity {
     private Calendar dataNascimento;
 
     @OneToMany
-    @JoinTable(name="pessoacontato",schema="business",
+    @JoinTable(name="pessoacontato",
     joinColumns = @JoinColumn(name = "pessoaid",referencedColumnName = "id"),
     inverseJoinColumns = @JoinColumn(name="contatoid",referencedColumnName = "id"))
     private List<Contato> contatos;

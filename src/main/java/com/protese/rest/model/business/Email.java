@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table (name = "email", schema="business")
+@Table (name = "email")
 public class Email extends BaseEntity {
 
     private String email;
